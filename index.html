@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- R E S P O N S I V E PAGE -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- USE MY   S T Y L E   S H E E T   IN FILETREE -->
+    <!-- <link rel="stylesheet" type="text/css" href="styles/style.css"> -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!-- ↑ BULMA : Predesigned external CSS : 'free, open source CSS framework based on Flexbox..' "https://github.com/jgthms/bulma/blob/master/css/bulma.css"-->
+
+    <title>V's Prayer Box ♥</title>    
+  </head>
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+  <body>
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+<!--* ' W E L C O M E '   H E A D I N G  -->
+
+<div class="container has-text-centered">
+        <div class="title is-2 has-text-info-light" 
+            style="padding: 20px; text-shadow: 1px 1px 3px black; letter-spacing: 10px;">
+        
+            W E L C O M E ♥ T O
+        </div>
+
+        <div class="title is-1 has-text-info-dark" 
+            style="padding: 0 0 90px 0; text-shadow: 1px 1px 3px black; letter-spacing: 10px;">
+        
+            - - V's Prayer Box - - 
+        </div>
+</div>
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->    
+<!-- T H E   F O R M -->
+
+    <div class="title has-text-centered">create your prayer request here..</div>
+
+    <div class="container has-text-centered" id="container-prayer-form">
+
+
+            <form id="new-prayer-form">
+
+                <!-- NAME -->
+                <div class="control mx-6">
+                    <input id="n-p-n" name="prayer-human-name" class="input" type="text" placeholder="Name">
+                </div>            
+                <!-- PRAYER BOX -->
+                <div class="control mx-5">
+                    <textarea id="n-p-b" name="prayer-body" class="textarea is-focused" placeholder="Prayer Request"></textarea>
+                </div>
+                <!-- CITY | STATE -->
+                <div class="field is-grouped is-grouped-centered">
+
+                    <div class="control">
+                        <input id="n-p-c" name="prayer-human-city" class="input" type="text" placeholder="City">
+                    </div>
+
+                    <div class="control">
+                        <input id="n-p-s" name="prayer-human-state" class="input" type="text" placeholder="State">
+                    </div>
+
+                </div>
+                <!-- SUBMIT BUTTON -->
+                <div class="control">
+                    <button class="button is-primary">Submit</button>
+                </div>
+
+            </form>        
+        
+    </div>
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+<!-- D O M   I N J E C T I O N  -->
+                                    
+<div class="card">
+        <ul id="prayers-place">
+            <!-- ITERATED PRAYERS LIST ITEMS WILL INJECT HERE -->
+        </ul>
+</div>
+                                    
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+<!--* L O A D   S C R I P T S | ⚠ O R D E R   M A T T E R S ⚠ -->
+
+<!-- INITIATES PRAYER CONSTRUCTOR w/ FETCHING & PRE-LOADING -->
+<script src="src/components/prayer.js"></script>
+
+<!-- INITIATES PRAYERS CONSTRUCTOR w/ FETCHING & PRE-LOADING -->
+<script src="src/components/prayers.js"></script>
+
+<!-- STARTS UP THE ENTIRE APP -->
+<script src="src/components/app.js"></script>
+
+<!-- THE API -->
+<script src="src/adapters/PrayersAdapter.js"></script>
+
+<!-- USER INTERACTION PAGE -->
+<script src="src/index.js"></script>    
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+  </body>
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
+</html>
