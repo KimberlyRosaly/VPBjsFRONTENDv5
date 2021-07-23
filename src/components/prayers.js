@@ -8,9 +8,9 @@ class Prayers {
         // GRABS THE F E T C H  S E R V I C E  WITH THE API'S URL
         this.adapter = new PrayersAdapter()
 
-        //? 🕫 INVOKE L I S T E N E R S, ETC 🕫=-=-=--=-=-=-=-=-=-==-=-=-=
+        // 🕫 INVOKE L I S T E N E R S, ETC 🕫=-=-=--=-=-=-=-=-=-==-=-=-=
         this.iBindingsEventListeners()
-        //? =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=
+        // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=
         // this.starBindingsEventListeners() //*<--CUTE STAR BUTTON INVOCATION
         
         this.fetchAndLoadPrayers()
@@ -37,31 +37,28 @@ class Prayers {
         //! Cernan's video - part 2 - 25:00
 
 // ===============================================================================
-        //* PRETEND YOU KNOW HOW TO USE THE STAR LIKES
-        document.addEventListener("DOMContentLoaded", () => {
+     //* PRETEND YOU KNOW HOW TO USE THE STAR LIKES
+     document.addEventListener("click", () => {
 
-            const EMPTY_STAR = 'P R ☆ Y'
-            const FULL_STAR = 'P R ★ Y'
+        const EMPTY_STAR = 'P R ☆ Y'
+        const FULL_STAR = 'P R ★ Y'
 
-            // this.starButtons = document.getElementsByName('star-button') //<---returns NodeList []
-            this.starButtons = document.getElementsByClassName('star-button') //<---returns HTML Collection
-             console.log('youre okay, take a deep breath', this.starButtons)
-                
-            for (const star of this.starButtons) {
-                    console.log(star)
-                    debugger;
-                        this.star.addEventListener("click", () => {
-                            console.log(star)
-                            debugger;
-                        })
-            }
+        // this.starButtons = document.getElementsByName('star-button') //<---returns NodeList []
+        this.starButtons = document.getElementsByClassName('star-button') //<---returns HTML Collection
+         console.log('youre okay, take a deep breath', this.starButtons)
             
-            
-        })
+        for (const star of this.starButtons) {
+                console.log(star)
+                // debugger;
+                    this.star.addEventListener("click", () => {
+                        console.log(star)
+                        debugger;
+                    })
+        }
         
         
-
-    
+    })
+        
 // ===============================================================================
     }
     //? =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -120,7 +117,7 @@ class Prayers {
            
             // BETTER TO ✓ CREATE A CLASS & ✓ INSTANTIATE NEW OBJECTS w/ IT & PUSH         
             .then(prayers => {prayers.forEach( prayer => this.prayers.push( new Prayer(prayer) ) )
-                console.log( prayers ) 
+                // console.log( prayers ) 
             })
 
             .then( () => {

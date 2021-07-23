@@ -21,10 +21,31 @@ class Prayer {
                 | ${ this.human_name } |
                 ${ this.human_city }, ${ this.human_state } | ${ this.created_at } <br>                
                 ${ this.counter } others have joined in prayer
-                <button class="star-button" name="star-button">${ EMPTY_STAR }</button><br>
                 <i>${ this.body }</i>
+                <button class="star-button" name="star-button">${ EMPTY_STAR }</button><br>
             </li>            
             `
     }     
 
 }
+
+/*
+1) renderRequest returns ListItemStringPrayer
+2) renderButton returns StarButtonString
+    StarButton must hold on to :prayer_id | prayer.id
+        MAYBE STORE IT IN A name="prayer[`${this.id}]`"???
+        LISTENER ATTACHED
+        WHEN CLICKED - 
+3)  
+
+
+    Prayers
+        pushButtons(){
+            '<button class="star-button">${ EMPTY_STAR }</button>'
+        }
+
+
+JAZMIN : : 
+
+
+*/
